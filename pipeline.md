@@ -21,7 +21,7 @@ wget http://hgdownload.cse.ucsc.edu/goldenPath/mm10/bigZips/chromFa.tar.gz
 tar zvfx chromFa.tar.gz
 cat *.fa > mm10.fa
 rm chr*.fa
-# 构建bowtie索引   *bowtie2 所花时间较长，建议用丢后台，同时注意输出文件地址*
+# 构建bowtie索引   *bowtie2 所花时间较长，建议用丢后台，同时注意给输出文件文件名前缀*
 time bowtie2-build mm10.fa ~/paired_tag_data/Paired-Tag-master/refereces/mm10.fa 1>mm10.bowtie_index.log 2>&1 &
 ```
 
