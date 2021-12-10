@@ -22,14 +22,15 @@ tar zvfx chromFa.tar.gz
 cat *.fa > mm10.fa
 rm chr*.fa
 # 构建bowtie索引   *bowtie2 所花时间较长，建议用丢后台，同时注意给输出文件文件名前缀*
-time bowtie2-build mm10.fa ~/paired_tag_data/Paired-Tag-master/refereces/mm10.fa 1>mm10.bowtie_index.log 2>&1 &
+time bowtie2-build mm10.fa mm10 &
 ```
 
-the scripts 'shellscrips/02.proc_DNA.sh' also can't work.
+The scripts 'shellscrips/02.proc_DNA.sh' also can't work.
 
-so try the following scripts:
+So try the following scripts:
 ```
 trim_galore SRR12955974_BC_cov.fq.gz
+bowtie2 -x ~/paired_tag_data/Paired-Tag-master/refereces/mm10 -U SRR12955974_BC_cov_trimmed.fq.gz --no-unal -p 8 -S SRR12955974_mm10.sam
 
 
 
