@@ -30,6 +30,7 @@ The scripts 'shellscrips/02.proc_DNA.sh' also can't work.
 So try the following scripts:
 ```
 trim_galore SRR12955974_BC_cov.fq.gz
+#bowtie2 对比也很花时间，不用问怎么知道的，能丢后台就丢吧，摊手
 bowtie2 -x ~/paired_tag_data/Paired-Tag-master/refereces/mm10 -U SRR12955974_BC_cov_trimmed.fq.gz --no-unal -p 8 -S SRR12955974_mm10.sam
 
 
