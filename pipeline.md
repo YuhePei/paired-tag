@@ -1,4 +1,4 @@
-##pre-processing
+#### pre-processing
 
 In this section, the shell scripts can't work well for datasets downloaded from SRA, so we need to change it slightly.
 
@@ -12,7 +12,9 @@ zcat SRR12955974_combined.fq.gz | bowtie /home/adminpku/paired_tag_data/Paired-T
 perl /home/adminpku/paired_tag_data/Paired-Tag-master/perlscripts/sam2covFastq.pl SRR12955974_BC.sam
 ```
 
-when mapping, we need to download the mm10 reference genome
+#### mapping
+
+Firstly, we need to download the mm10 reference genome.
 
 ```shell
 #下载并解压mm10 genome
