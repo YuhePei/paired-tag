@@ -34,6 +34,8 @@ So try the following scripts:
 trim_galore SRR12955974_BC_cov.fq.gz
 #bowtie2 对比也很花时间，不用问怎么知道的，能丢后台就丢吧，摊手
 bowtie2 -x ~/paired_tag_data/Paired-Tag-master/refereces/mm10 -U SRR12955974_BC_cov_trimmed.fq.gz --no-unal -p 8 -S SRR12955974_mm10.sam
+#bowtie2 这里试了几次没有成功，文件总是非常小，现在已经排除了索引的问题，怀疑可能是上一步的文件出错了，准备重新那一组数据来试一试
+
 
 
 
