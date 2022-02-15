@@ -25,6 +25,10 @@ cat *.fa > mm10.fa
 rm chr*.fa
 # 构建bowtie索引   *bowtie2 所花时间较长，建议用丢后台，同时注意给输出文件文件名前缀*
 time bowtie2-build mm10.fa mm10 &
+
+#下载并解压mm10 reference构建基因组索引
+下载网址 https://nov2020.archive.ensembl.org/Mus_musculus/Info/Index  下载的为GRCm38 e.g. mm10
+下载后用STAR构建索引  *STAR运行建议在服务器上跑，因为所需要消耗的内存较大，且所需要的时间较长*
 ```
 
 The scripts 'shellscrips/02.proc_DNA.sh' also can't work.
